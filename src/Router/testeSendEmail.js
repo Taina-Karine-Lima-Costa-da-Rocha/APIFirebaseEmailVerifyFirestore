@@ -6,50 +6,6 @@ const routers = express.Router()
 
 const { admin, keyRandom } = require("../config/firebase/index")
 
-/*==================================================*/
-
-// const mailOptions = {
-//     from: 'meuteste.teste.6ma1l@gmail.com', // sender address
-//     to: 'rinabey883@rxcay.com', // receiver (use array of string for a list)
-//     subject: 'Email teste de Maclaurin do pc taina', // Subject line
-//     html: '<p>Este é um email de teste Maclaurim mandou isso </p>'// plain text body
-// };
-
-// const transporter = nodeMailer.createTransport({
-//     service: "gmail",
-//     host: "smtp.gmail.com",
-//     port: 587,
-//     secure: false,
-//     auth: {
-//         user: "meuteste.teste.6ma1l@gmail.com",
-//         pass: "ntkypyhouzhexsic"
-//     }, tls: {
-//         rejectUnauthorized: false
-//     }
-
-// })
-// //
-// routers.get("/envi", async (req, res) => {
-//     const mailset = await transporter.sendMail(mailOptions, (err, info) => {
-//         try {
-//             if (err) {
-//                 console.log(err)
-//             } else {
-//                 console.log(info);
-//             }
-//         } catch (error) {
-//             console.log("aqui ha um erro *")
-//             console.log(error)
-//         }
-//     });
-
-//     console.log(mailset)
-
-//     return res.status(200).json({ msg: "pode ter erro" })
-// })
-
-/*==================================================*/
-
 routers.post("/verificationLink", async (req, res) => {
     const userData = req.body;
     console.log("daddos da req body *")
